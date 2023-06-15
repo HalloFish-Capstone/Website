@@ -1,3 +1,3 @@
-# Capstone Hallo Fish
+# Capstone HalloFish
 
 This is the repository for Capstone Hallo Fish
