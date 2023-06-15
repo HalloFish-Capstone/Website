@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HASIL PREDIKSI</title>
+</head>
+<body>
+    <h1>Hasil Prediksi</h1>
+    {% if prediction == 'REDSPOT' %}
+        <h2>BACTERIAL</h2>
+        <!-- Tampilkan informasi tambahan atau gambar terkait REDSPOT -->
+    {% elif prediction == 'WHITESPOT' %}
+        <h2>HEALTHY</h2>
+        <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT -->
+    {% elif prediction == 'HEALTHY' %}
+        <h2>REDSPOT</h2>
+        <!-- Tampilkan informasi tambahan atau gambar terkait HEALTHY -->
+    {% elif prediction == 'BACTERIAL' %}
+        <h2>WHITESPOT</h2>
+        <!-- Tampilkan informasi tambahan atau gambar terkait BACTERIAL -->
+    {% endif %}
+</body>
+</html>
