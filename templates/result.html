@@ -2,21 +2,119 @@
 <html>
 <head>
     <title>HASIL PREDIKSI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0080ff;
+            margin-top: 50px;
+        }
+
+        h2 {
+            color: #555555;
+            margin-top: 20px;
+        }
+
+        .prediction-info {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+
+        .prediction-info img {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .prediction-info p {
+            text-align: left;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Hasil Prediksi</h1>
     {% if prediction == 'REDSPOT' %}
-        <h2>BACTERIAL</h2>
-        <!-- Tampilkan informasi tambahan atau gambar terkait REDSPOT -->
+        <div class="prediction-info">
+            <h2>BACTERIAL</h2>
+            <!-- Tampilkan informasi tambahan atau gambar terkait REDSPOT -->
+            <img src="path/to/redspot-image.jpg" alt="GambarBacterial" />
+            <p style="color: green; font-size: 20px;">Bacterial </p>
+            <p>Ciri utama: Perubahan fisik, Infeksi bakteri pada ikan dapat menyebabkan perubahan fisik yang terlihat, seperti lesi atau luka pada kulit atau sirip. Lesi ini dapat berupa bintik-bintik putih, benang-benang putih, atau warna kulit yang berubah menjadi abu-abu atau keabu-abuan. Jaringan yang terinfeksi juga dapat mengalami pembusukan atau pembengkakan.</p>
+            <p>Perilaku: Ikan yang terinfeksi bakteri dapat menunjukkan perubahan perilaku seperti kehilangan nafsu makan, kelemahan, atau kurang aktif. Mereka mungkin terlihat malas atau mengambang di permukaan air.</p>
+            <p>Deskripsi: Penyakit ikan bakterial (bacterial disease) adalah kondisi penyakit yang disebabkan oleh infeksi bakteri pada ikan. Bakteri dapat masuk ke dalam tubuh ikan melalui berbagai cara, seperti luka, stres, atau kondisi lingkungan yang tidak optimal. Infeksi bakteri pada ikan dapat menyebabkan berbagai gejala dan masalah kesehatan yang serius.</p>
+            <p>Pengobatan: Pengobatan penyakit ikan bacterial melibatkan beberapa langkah yang dapat dilakukan:</p>
+            <ol>
+                <li>Identifikasi dan diagnosis: Penting untuk mengidentifikasi jenis bakteri penyebab infeksi agar pengobatan yang tepat dapat diberikan. Dalam beberapa kasus, pemeriksaan laboratorium atau konsultasi dengan ahli akuakultur atau dokter hewan mungkin diperlukan.</li>
+                <li>Isolasi ikan yang terinfeksi: Jika ikan terinfeksi, segera pisahkan dari ikan lainnya untuk mencegah penyebaran penyakit ke ikan lain di dalam akuarium atau kolam. Ikan yang terinfeksi harus dipindahkan ke wadah yang bersih dan terpisah.</li>
+                <li>Perawatan air dan lingkungan: Pastikan kualitas air dan lingkungan yang optimal bagi ikan. Monitor dan sesuaikan parameter seperti suhu, pH, kadar amonia, dan oksigen terlarut agar kondisi lingkungan mendukung pemulihan ikan yang terinfeksi.</li>
+                <li>Penggunaan antibiotik: Dalam beberapa kasus, pengobatan dengan antibiotik dapat diperlukan untuk mengatasi infeksi bakterial. Penggunaan antibiotik harus dilakukan dengan hati-hati dan sesuai petunjuk dokter hewan atau ahli akuakultur yang berpengalaman. Penting untuk memperhatikan dosis yang benar dan jangka waktu pengobatan yang tepat agar infeksi dapat diatasi dengan efektif.</li>
+                <li>Pemberian obat-obatan tambahan: Selain antibiotik, ada beberapa obat tambahan yang dapat digunakan untuk meningkatkan kekebalan ikan dan membantu dalam pemulihan mereka. Ini dapat termasuk probiotik, vitamin, atau suplemen lain yang direkomendasikan oleh ahli akuakultur.</li>
+                <li>Perbaikan manajemen akuarium atau kolam: Evaluasi kondisi keseluruhan akuarium atau kolam dan pastikan bahwa praktik manajemen yang baik diterapkan. Ini termasuk menjaga kebersihan, melakukan penggantian air rutin, dan memberikan pakan yang seimbang dan berkualitas tinggi.</li>
+            </ol>
+        </div>
     {% elif prediction == 'WHITESPOT' %}
-        <h2>HEALTHY</h2>
-        <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT -->
+        <div class="prediction-info">
+            <h2>HEALTHY</h2>
+            <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT -->
+            <img src="path/to/whitespot-image.jpg" alt="GambarHealthy" />
+            <p style="color: blue; font-size: 20px;">Bacterial (bold biru dan besar)</p>
+            <p>Ciri utama: Perubahan fisik, Infeksi bakteri pada ikan dapat menyebabkan perubahan fisik yang terlihat, seperti lesi atau luka pada kulit atau sirip. Lesi ini dapat berupa bintik-bintik putih, benang-benang putih, atau warna kulit yang berubah menjadi abu-abu atau keabu-abuan. Jaringan yang terinfeksi juga dapat mengalami pembusukan atau pembengkakan.</p>
+            <p>Perilaku: Ikan yang terinfeksi bakteri dapat menunjukkan perubahan perilaku seperti kehilangan nafsu makan, kelemahan, atau kurang aktif. Mereka mungkin terlihat malas atau mengambang di permukaan air.</p>
+            <p>Deskripsi: Penyakit ikan bakterial (bacterial disease) adalah kondisi penyakit yang disebabkan oleh infeksi bakteri pada ikan. Bakteri dapat masuk ke dalam tubuh ikan melalui berbagai cara, seperti luka, stres, atau kondisi lingkungan yang tidak optimal. Infeksi bakteri pada ikan dapat menyebabkan berbagai gejala dan masalah kesehatan yang serius.</p>
+            <p>Pengobatan: Pengobatan penyakit ikan bacterial melibatkan beberapa langkah yang dapat dilakukan:</p>
+            <ol>
+                <li>Identifikasi dan diagnosis: Penting untuk mengidentifikasi jenis bakteri penyebab infeksi agar pengobatan yang tepat dapat diberikan. Dalam beberapa kasus, pemeriksaan laboratorium atau konsultasi dengan ahli akuakultur atau dokter hewan mungkin diperlukan.</li>
+                <li>Isolasi ikan yang terinfeksi: Jika ikan terinfeksi, segera pisahkan dari ikan lainnya untuk mencegah penyebaran penyakit ke ikan lain di dalam akuarium atau kolam. Ikan yang terinfeksi harus dipindahkan ke wadah yang bersih dan terpisah.</li>
+                <li>Perawatan air dan lingkungan: Pastikan kualitas air dan lingkungan yang optimal bagi ikan. Monitor dan sesuaikan parameter seperti suhu, pH, kadar amonia, dan oksigen terlarut agar kondisi lingkungan mendukung pemulihan ikan yang terinfeksi.</li>
+                <li>Penggunaan antibiotik: Dalam beberapa kasus, pengobatan dengan antibiotik dapat diperlukan untuk mengatasi infeksi bakterial. Penggunaan antibiotik harus dilakukan dengan hati-hati dan sesuai petunjuk dokter hewan atau ahli akuakultur yang berpengalaman. Penting untuk memperhatikan dosis yang benar dan jangka waktu pengobatan yang tepat agar infeksi dapat diatasi dengan efektif.</li>
+                <li>Pemberian obat-obatan tambahan: Selain antibiotik, ada beberapa obat tambahan yang dapat digunakan untuk meningkatkan kekebalan ikan dan membantu dalam pemulihan mereka. Ini dapat termasuk probiotik, vitamin, atau suplemen lain yang direkomendasikan oleh ahli akuakultur.</li>
+                <li>Perbaikan manajemen akuarium atau kolam: Evaluasi kondisi keseluruhan akuarium atau kolam dan pastikan bahwa praktik manajemen yang baik diterapkan. Ini termasuk menjaga kebersihan, melakukan penggantian air rutin, dan memberikan pakan yang seimbang dan berkualitas tinggi.</li>
+            </ol>
+            <p>Ikan Anda sehat dan terus pertahankan semua aspeknya. Jaga kebersihan air, pemberian makanan yang seimbang, serta lingkungan hidup yang optimal untuk memastikan kesehatan dan kesejahteraan ikan Anda. Perhatikan juga tanda-tanda kesehatan ikan, seperti aktivitas normal, nafsu makan yang baik, dan penampilan yang cerah. Dengan perhatian dan perawatan yang tepat, Anda dapat memastikan ikan Anda tetap sehat dan bahagia.</p>
+        </div>
     {% elif prediction == 'HEALTHY' %}
-        <h2>REDSPOT</h2>
-        <!-- Tampilkan informasi tambahan atau gambar terkait HEALTHY -->
+        <div class="prediction-info">
+            <h2>REDSPOT</h2>
+            <!-- Tampilkan informasi tambahan atau gambar terkait HEALTHY -->
+            <img src="path/to/healthy-image.jpg" alt="GambarRedspot" />
+            <p style="color: red; font-size: 20px;">Red Spot </p>
+            <p>Ciri utama penyakit ikan red spot adalah munculnya bintik-bintik merah pada tubuh ikan. Bintik merah tersebut dapat terlihat seperti titik-titik kecil atau membesar dan menyebar ke area yang lebih luas.</p>
+            <p>Perilaku : ikan yang terinfeksi juga dapat mengalami gejala lain seperti gatal, menggosokkan tubuhnya ke substrat atau permukaan objek lain, dan kehilangan nafsu makan.</p>
+            <p>Deskripsi : Penyakit ikan red spot (red spot disease) atau juga dikenal sebagai penyakit tanda merah pada ikan adalah penyakit yang umum terjadi pada ikan air tawar. Penyakit ini disebabkan oleh infeksi parasit dari genus Neobenedenia atau Quadriacanthus. Penyakit ikan red spot biasanya menyerang ikan yang sistem kekebalan tubuhnya lemah atau terlalu stres. Infeksi parasit dapat terjadi melalui kontak langsung dengan ikan yang terinfeksi atau melalui benda-benda yang terkontaminasi.</p>
+            <p>Pengobatan : penyakit ikan red spot biasanya melibatkan penggunaan obat-obatan atau larutan yang mengandung bahan aktif antiparasit. Selain itu, menjaga kualitas air yang baik dan memberikan makanan yang sehat dan bergizi kepada ikan juga dapat membantu dalam pencegahan penyakit ini.</p>
+            <ol>
+                <li>Formalin: Formalin merupakan salah satu obat yang efektif untuk mengatasi infeksi parasit pada ikan, termasuk parasit yang menyebabkan penyakit red spot. Penggunaan formalin harus dilakukan dengan hati-hati dan mengikuti petunjuk dosis yang tepat.</li>
+                <li>Malachite Green: Malachite green juga merupakan obat yang sering digunakan untuk mengobati penyakit parasit pada ikan, termasuk red spot disease. Obat ini memiliki sifat antiparasit dan antijamur. Penggunaan malachite green harus dilakukan dengan hati-hati dan mengikuti petunjuk dosis yang tepat.</li>
+                <li>Methylene Blue: Methylene blue adalah obat yang dapat digunakan untuk mengobati infeksi parasit pada ikan, termasuk red spot disease. Obat ini memiliki sifat antiparasit, antijamur, dan antimikroba. Namun, penggunaannya harus disesuaikan dengan dosis yang tepat dan disesuaikan dengan kondisi ikan.</li>
+            </ol>
+        </div>
     {% elif prediction == 'BACTERIAL' %}
-        <h2>WHITESPOT</h2>
-        <!-- Tampilkan informasi tambahan atau gambar terkait BACTERIAL -->
+        <div class="prediction-info">
+            <h2>WHITESPOT</h2>
+            <!-- Tampilkan informasi tambahan atau gambar terkait BACTERIAL -->
+            <img src="path/to/bacterial-image.jpg" alt="GambarWhitespot" />
+            <p style="color: blue; font-size: 20px;">White Spot </p>
+            <p>Ciri utama: Munculnya bintik-bintik putih yang menyerupai butiran garam pada tubuh, sirip, dan insang ikan.</p>
+            <p>Perilaku: Perilaku ikan menjadi lebih lesu dan tidak aktif, pernapasan ikan menjadi lebih cepat dan terengah-engah, ikan mengalami kehilangan nafsu makan, ikan terlihat gelisah, cenderung menggosokkan tubuhnya ke permukaan benda-benda di akuarium atau kolam.</p>
+            <p>Deskripsi: Penyakit ikan white spot, atau yang juga dikenal sebagai "Ich" atau "Ick", adalah penyakit yang disebabkan oleh parasit bernama Ichthyophthirius multifiliis. Parasit ini menginfeksi ikan air tawar dan air laut, dan dapat menyebabkan gejala-gejala yang mencolok pada ikan yang terinfeksi. Penyakit ikan white spot dapat menyebar dengan cepat dan dapat menyebabkan kematian jika tidak segera diobati.</p>
+            <p>Pengobatan: penyakit ikan white spot biasanya melibatkan penggunaan obat-obatan antiparasit yang efektif untuk membunuh parasit Ichthyophthirius multifiliis. Berikut adalah langkah-langkah umum untuk pengobatan penyakit ikan white spot:</p>
+            <ol>
+                <li>Peningkatan suhu air: Parasit Ichthyophthirius multifiliis sensitif terhadap suhu tinggi. Dengan meningkatkan suhu air di dalam akuarium atau kolam, Anda dapat membantu mempercepat siklus hidup parasit dan membuatnya lebih rentan terhadap pengobatan. Konsultasikan dengan peternak ikan atau ahli akuakultur untuk mengetahui suhu yang tepat untuk spesies ikan Anda.</li>
+                <li>Penggunaan obat antiparasit: Ada berbagai obat-obatan yang tersedia untuk pengobatan penyakit ikan white spot. Beberapa bahan aktif yang umum digunakan meliputi malachite green, formalin, copper sulfate, atau metilen biru. Obat-obatan ini biasanya tersedia dalam bentuk cair atau dalam tablet yang larut dalam air. Ikuti petunjuk penggunaan yang tertera pada kemasan obat dengan cermat, termasuk dosis yang dianjurkan dan durasi pengobatan.</li>
+                <li>Perawatan kolam atau akuarium: Selama pengobatan, penting untuk menjaga kondisi lingkungan akuarium atau kolam tetap bersih. Lakukan penggantian air secara teratur, bersihkan filter, dan pastikan sirkulasi air yang baik. Bersihkan juga peralatan akuarium, seperti jaring, dengan hati-hati setelah digunakan.</li>
+                <li>Karantina: Jika Anda memiliki ikan yang terinfeksi white spot, sebaiknya pisahkan ikan tersebut dari yang lain untuk mencegah penyebaran penyakit. Tempatkan ikan tersebut dalam wadah karantina yang terpisah dengan kondisi lingkungan yang optimal untuk penyembuhan.</li>
+            </ol>
+            <p>Penting untuk dicatat bahwa pengobatan penyakit ikan white spot membutuhkan kesabaran dan konsistensi. Beberapa siklus pengobatan mungkin diperlukan untuk memastikan semua parasit mati.</p>
+        </div>
     {% endif %}
 </body>
 </html>

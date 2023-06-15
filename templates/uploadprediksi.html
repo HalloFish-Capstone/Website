@@ -2,56 +2,141 @@
 <html>
 <head>
     <title>DETEKSI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background-color: lightblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ocean {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-color: #008b8b;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20%;
+            background-color: rgba(84, 153, 199, 0.6);
+            opacity: 0.8;
+            animation: wave 10s infinite linear;
+        }
+
+        .wave-top {
+            top: 0;
+            bottom: auto;
+            animation: wave-top 12s infinite linear;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0) scaleY(1);
+            }
+            50% {
+                transform: translateX(50%) scaleY(0.8);
+            }
+            100% {
+                transform: translateX(100%) scaleY(1);
+            }
+        }
+
+        @keyframes wave-top {
+            0% {
+                transform: translateX(0) scaleY(1);
+            }
+            50% {
+                transform: translateX(-50%) scaleY(0.8);
+            }
+            100% {
+                transform: translateX(-100%) scaleY(1);
+            }
         }
 
         h1 {
-            text-align: center;
-            color: darkblue;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            margin-top: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
         }
 
         input[type="file"] {
-            padding: 10px;
-            border: 2px solid darkblue;
-            border-radius: 4px;
-            font-size: 16px;
+            display: none;
         }
 
-        input[type="submit"] {
+        .custom-upload-button {
             padding: 10px 20px;
-            background-color: darkblue;
-            color: white;
+            background-color: #fff;
+            color: #0080ff;
             border: none;
             border-radius: 4px;
             font-size: 16px;
             cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-right: 10px;
         }
 
-        input[type="submit"]:hover {
-            background-color: #001F5B;
+        .custom-upload-button:hover {
+            background-color: #f2f2f2;
+        }
+
+        .upload-icon {
+            margin-right: 5px;
         }
 
         .preview-container {
-            display: flex;
+            display: none;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: -20px;
         }
 
         .preview-image {
-            max-width: 300px;
-            max-height: 300px;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #0080ff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-button:hover {
+            background-color: #005cbf;
         }
     </style>
     <script>
@@ -66,22 +151,32 @@
 
             if (file) {
                 reader.readAsDataURL(file);
+                document.querySelector('.preview-container').style.display = 'flex';
             } else {
                 preview.src = "";
+                document.querySelector('.preview-container').style.display = 'none';
             }
         }
     </script>
 </head>
 <body>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave wave-top"></div>
+    </div>
     <h1>DETEKSI SEKARANG</h1>
     <form method="POST" action="/predict" enctype="multipart/form-data">
-        <input type="file" name="file" onchange="previewFile()" />
-        <br /><br />
         <div class="preview-container">
             <img class="preview-image" src="" alt="Preview" />
         </div>
-        <br />
-        <input type="submit" value="Upload" />
+        <div class="button-container">
+            <label for="file-upload" class="custom-upload-button">
+                <i class="fas fa-upload upload-icon"></i> Pilih Gambar
+            </label>
+            <input id="file-upload" type="file" name="file" onchange="previewFile()" />
+            <input type="submit" value="Prediksi" class="submit-button" />
+        </div>
     </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 </html>
