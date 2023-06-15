@@ -1,52 +1,208 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HASIL PREDIKSI</title>
+    <!---<<< Tittle >>>--->
+    <title>Prediction Results</title>
+
+    <!---<<< Main Awesome Fonts Google >>>--->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!---<<< Fonts Icon >>>--->
+    <link rel="stylesheet" href="../A-WebApps/Img/material-icon/css/material-design-iconic-font.min.css">
+
+    <!---<<< Set Icon Tittlebar >>>---> 
+    <link rel="shortcut icon" type="image" href="../A-WebApps/Img/icon-hallofish.png">
+
+    <!---<<< Styles CSS >>>--->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
+        :root {
+            /*---<<< Variables Theme Colour >>>---*/
+            --base-shade-1: #137ffe;
+            --base-shade-2: #081f32;
+            --base-shade-3: #bde6f1;
+            --base-shade-4: #f8f8f8;
+            --white-shade-1: #ffffff;
+            --white-shade-2: #92ebf1;
+            --white-shade-3: #00ffea;
+            --white-shade-4: #cecece;
+            --white-shade-5: #c7d36f;
+            --black-shade-1: #22577e;
+            --black-shade-2: #4e4dab;
+            --black-shade-3: #1f3743;
+            --black-shade-4: #5f7161;
+            --black-shade-5: #779998;
+            --black-shade-6: #999;
+            --grad-color-1: 0, 180, 250;
+            --grad-color-2: 21, 120, 255;
         }
 
-        h1 {
-            color: #0080ff;
-            margin-top: 50px;
+        html::-webkit-scrollbar {
+            width: 0.7rem;
+        }
+  
+        html::-webkit-scrollbar-track {
+            background: var(--white-shade-1);
+        }
+  
+        html::-webkit-scrollbar-thumb {
+            background: var(--white-shade-4);
+            border-radius: 50px;
+        }
+
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: var(--base-shade-3);
+            margin : 0px;
+        }
+
+        .cont{
+            background-color: var(--base-shade-4);
+            margin : 0px;
+            padding:0px;
+            height: 300px;
+            padding-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        h1{
+            font-size: 15px;
+            font-family: Poppins;
+            font-weight: bold;
+            color: var(--base-shade-4);
         }
 
         h2 {
-            color: #555555;
-            margin-top: 20px;
+            font-size: 50px;
+            font-family: Poppins;
+            text-align: center;
+            padding: 20px 10px;
+            color: var(--white-shade-1);
+            -webkit-text-stroke: var(--black-shade-1) 2px;
+            text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: 6px;
         }
 
         .prediction-info {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 4px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            width: 75%;
+            margin: 0 auto center;
+            background: var(--black-shade-5);
+            background-image: -webkit-linear-gradient(top, #94caff, #92ebf1);
+            background-image: -moz-linear-gradient(top, #94caff, #92ebf1);
+            background-image: -ms-linear-gradient(top, #94caff, #92ebf1);
+            background-image: -o-linear-gradient(top, #94caff, #b0d6d8);
+            background-image: linear-gradient(to bottom, #94caff, #b0d6d8);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            color: var(--base-shade-2);
+            font-family: poppins;
+            font-size: 18px;
+            font-weight: 100;
+            padding: 30px 55px 30px 55px;
+            box-shadow: 1px 1px 20px 0px var(--base-shade-2);
+            -webkit-box-shadow: 1px 1px 20px 0px var(--base-shade-2);
+            -moz-box-shadow: 1px 1px 20px 0px var(--base-shade-2);
+            text-shadow: 1px 1px 20px var(--base-shade-3);
+            border: transparent;
+            text-decoration: none;
             display: inline-block;
+            cursor: pointer;
+            text-align: justify;
+            text-decoration: none;
         }
 
         .prediction-info img {
-            width: 200px;
+            width: 300px;
             height: auto;
             margin-top: 20px;
         }
 
         .prediction-info p {
-            text-align: left;
+            text-align: justify;
             font-weight: bold;
+        }
+
+        .btn {
+            background: var(--black-shade-5);
+            background-image: -webkit-linear-gradient(top, #22577e, #92ebf1);
+            background-image: -moz-linear-gradient(top, #22577e, #92ebf1);
+            background-image: -ms-linear-gradient(top, #22577e, #92ebf1);
+            background-image: -o-linear-gradient(top, #22577e, #92ebf1);
+            background-image: linear-gradient(to bottom, #22577e, #92ebf1);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-family: Verdana;
+            font-size: 25px;
+            font-weight: 100;
+            padding: 10px;
+            box-shadow: 1px 1px 20px 0px #000000;
+            -webkit-box-shadow: 1px 1px 20px 0px #000000;
+            -moz-box-shadow: 1px 1px 20px 0px #000000;
+            text-shadow: 1px 1px 20px #000000;
+            border: solid var(--black-shade-1) 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            border: solid #89ED33 1px;
+            background: #92ebf1;
+            background-image: -webkit-linear-gradient(top, #92ebf1, #c7d36f);
+            background-image: -moz-linear-gradient(top, #92ebf1, #c7d36f);
+            background-image: -ms-linear-gradient(top, #92ebf1, #c7d36f);
+            background-image: -o-linear-gradient(top, #92ebf1, #c7d36f);
+            background-image: linear-gradient(to bottom, #92ebf1, #c7d36f);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        /*---<<< Scroll Top Button >>>---*/
+        #scroll-top {
+            position: fixed;
+            display: none;
+            place-items: center;
+            height: 5rem;
+            width: 5rem;
+            right: 3rem;
+            bottom: 3rem;
+            background-color: var(--black-shade-4);
+            color: var(--white-shade-2);
+            border: none;
+            outline: none;
+            font-size: var(--heading-font-size-3);
+            border-radius: var(--border-radius-2);
+            box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>Hasil Prediksi</h1>
-    {% if prediction == 'REDSPOT' %}
+    <div class='cont'><center><br /><br />
+        <h2>Prediction Results</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f8f8f8" fill-opacity="1" d="M0,192L8.9,165.3C17.8,139,36,85,53,90.7C71.1,96,89,160,107,176C124.4,192,142,160,160,144C177.8,128,196,128,213,149.3C231.1,171,249,213,267,240C284.4,267,302,277,320,245.3C337.8,213,356,139,373,122.7C391.1,107,409,149,427,154.7C444.4,160,462,128,480,133.3C497.8,139,516,181,533,181.3C551.1,181,569,139,587,138.7C604.4,139,622,181,640,170.7C657.8,160,676,96,693,85.3C711.1,75,729,117,747,138.7C764.4,160,782,160,800,149.3C817.8,139,836,117,853,133.3C871.1,149,889,203,907,197.3C924.4,192,942,128,960,128C977.8,128,996,192,1013,192C1031.1,192,1049,128,1067,101.3C1084.4,75,1102,85,1120,128C1137.8,171,1156,245,1173,250.7C1191.1,256,1209,192,1227,149.3C1244.4,107,1262,85,1280,85.3C1297.8,85,1316,107,1333,144C1351.1,181,1369,235,1387,245.3C1404.4,256,1422,224,1431,208L1440,192L1440,0L1431.1,0C1422.2,0,1404,0,1387,0C1368.9,0,1351,0,1333,0C1315.6,0,1298,0,1280,0C1262.2,0,1244,0,1227,0C1208.9,0,1191,0,1173,0C1155.6,0,1138,0,1120,0C1102.2,0,1084,0,1067,0C1048.9,0,1031,0,1013,0C995.6,0,978,0,960,0C942.2,0,924,0,907,0C888.9,0,871,0,853,0C835.6,0,818,0,800,0C782.2,0,764,0,747,0C728.9,0,711,0,693,0C675.6,0,658,0,640,0C622.2,0,604,0,587,0C568.9,0,551,0,533,0C515.6,0,498,0,480,0C462.2,0,444,0,427,0C408.9,0,391,0,373,0C355.6,0,338,0,320,0C302.2,0,284,0,267,0C248.9,0,231,0,213,0C195.6,0,178,0,160,0C142.2,0,124,0,107,0C88.9,0,71,0,53,0C35.6,0,18,0,9,0L0,0Z"></path></svg>
+    </div><br /><br /><br /><br /><br /><br /><center>
+    
+        <!---<<< Scroll Top & Button >>>--->
+        <button id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+        </button>
         <div class="prediction-info">
+            
             <h2>BACTERIAL</h2>
+            {% if prediction == 'REDSPOT' %}
+            <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait REDSPOT -->
-            <img src="path/to/redspot-image.jpg" alt="GambarBacterial" />
+            <img src="path/to/redspot-image.jpg" alt="GambarBacterial" /><br />
             <p style="color: green; font-size: 20px;">Bacterial </p>
             <p>Ciri utama: Perubahan fisik, Infeksi bakteri pada ikan dapat menyebabkan perubahan fisik yang terlihat, seperti lesi atau luka pada kulit atau sirip. Lesi ini dapat berupa bintik-bintik putih, benang-benang putih, atau warna kulit yang berubah menjadi abu-abu atau keabu-abuan. Jaringan yang terinfeksi juga dapat mengalami pembusukan atau pembengkakan.</p>
             <p>Perilaku: Ikan yang terinfeksi bakteri dapat menunjukkan perubahan perilaku seperti kehilangan nafsu makan, kelemahan, atau kurang aktif. Mereka mungkin terlihat malas atau mengambang di permukaan air.</p>
@@ -60,12 +216,14 @@
                 <li>Pemberian obat-obatan tambahan: Selain antibiotik, ada beberapa obat tambahan yang dapat digunakan untuk meningkatkan kekebalan ikan dan membantu dalam pemulihan mereka. Ini dapat termasuk probiotik, vitamin, atau suplemen lain yang direkomendasikan oleh ahli akuakultur.</li>
                 <li>Perbaikan manajemen akuarium atau kolam: Evaluasi kondisi keseluruhan akuarium atau kolam dan pastikan bahwa praktik manajemen yang baik diterapkan. Ini termasuk menjaga kebersihan, melakukan penggantian air rutin, dan memberikan pakan yang seimbang dan berkualitas tinggi.</li>
             </ol>
-        </div>
-    {% elif prediction == 'WHITESPOT' %}
+        </div><br /><br /><br /><br />
+    
         <div class="prediction-info">
             <h2>HEALTHY</h2>
-            <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT -->
-            <img src="path/to/whitespot-image.jpg" alt="GambarHealthy" />
+            {% elif prediction == 'WHITESPOT' %}
+            <br />
+            <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT --><br />
+            <img src="path/to/whitespot-image.jpg" alt="GambarHealthy" /><br />
             <p style="color: blue; font-size: 20px;">Bacterial (bold biru dan besar)</p>
             <p>Ciri utama: Perubahan fisik, Infeksi bakteri pada ikan dapat menyebabkan perubahan fisik yang terlihat, seperti lesi atau luka pada kulit atau sirip. Lesi ini dapat berupa bintik-bintik putih, benang-benang putih, atau warna kulit yang berubah menjadi abu-abu atau keabu-abuan. Jaringan yang terinfeksi juga dapat mengalami pembusukan atau pembengkakan.</p>
             <p>Perilaku: Ikan yang terinfeksi bakteri dapat menunjukkan perubahan perilaku seperti kehilangan nafsu makan, kelemahan, atau kurang aktif. Mereka mungkin terlihat malas atau mengambang di permukaan air.</p>
@@ -80,12 +238,14 @@
                 <li>Perbaikan manajemen akuarium atau kolam: Evaluasi kondisi keseluruhan akuarium atau kolam dan pastikan bahwa praktik manajemen yang baik diterapkan. Ini termasuk menjaga kebersihan, melakukan penggantian air rutin, dan memberikan pakan yang seimbang dan berkualitas tinggi.</li>
             </ol>
             <p>Ikan Anda sehat dan terus pertahankan semua aspeknya. Jaga kebersihan air, pemberian makanan yang seimbang, serta lingkungan hidup yang optimal untuk memastikan kesehatan dan kesejahteraan ikan Anda. Perhatikan juga tanda-tanda kesehatan ikan, seperti aktivitas normal, nafsu makan yang baik, dan penampilan yang cerah. Dengan perhatian dan perawatan yang tepat, Anda dapat memastikan ikan Anda tetap sehat dan bahagia.</p>
-        </div>
-    {% elif prediction == 'HEALTHY' %}
+        </div><br /><br /><br /><br />
+    
         <div class="prediction-info">
             <h2>REDSPOT</h2>
+            {% elif prediction == 'HEALTHY' %}
+            <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait HEALTHY -->
-            <img src="path/to/healthy-image.jpg" alt="GambarRedspot" />
+            <img src="path/to/healthy-image.jpg" alt="GambarRedspot" /><br />
             <p style="color: red; font-size: 20px;">Red Spot </p>
             <p>Ciri utama penyakit ikan red spot adalah munculnya bintik-bintik merah pada tubuh ikan. Bintik merah tersebut dapat terlihat seperti titik-titik kecil atau membesar dan menyebar ke area yang lebih luas.</p>
             <p>Perilaku : ikan yang terinfeksi juga dapat mengalami gejala lain seperti gatal, menggosokkan tubuhnya ke substrat atau permukaan objek lain, dan kehilangan nafsu makan.</p>
@@ -96,12 +256,14 @@
                 <li>Malachite Green: Malachite green juga merupakan obat yang sering digunakan untuk mengobati penyakit parasit pada ikan, termasuk red spot disease. Obat ini memiliki sifat antiparasit dan antijamur. Penggunaan malachite green harus dilakukan dengan hati-hati dan mengikuti petunjuk dosis yang tepat.</li>
                 <li>Methylene Blue: Methylene blue adalah obat yang dapat digunakan untuk mengobati infeksi parasit pada ikan, termasuk red spot disease. Obat ini memiliki sifat antiparasit, antijamur, dan antimikroba. Namun, penggunaannya harus disesuaikan dengan dosis yang tepat dan disesuaikan dengan kondisi ikan.</li>
             </ol>
-        </div>
-    {% elif prediction == 'BACTERIAL' %}
+        </div><br /><br /><br /><br />
+    
         <div class="prediction-info">
             <h2>WHITESPOT</h2>
+            {% elif prediction == 'BACTERIAL' %}
+            <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait BACTERIAL -->
-            <img src="path/to/bacterial-image.jpg" alt="GambarWhitespot" />
+            <img src="path/to/bacterial-image.jpg" alt="GambarWhitespot" /><br />
             <p style="color: blue; font-size: 20px;">White Spot </p>
             <p>Ciri utama: Munculnya bintik-bintik putih yang menyerupai butiran garam pada tubuh, sirip, dan insang ikan.</p>
             <p>Perilaku: Perilaku ikan menjadi lebih lesu dan tidak aktif, pernapasan ikan menjadi lebih cepat dan terengah-engah, ikan mengalami kehilangan nafsu makan, ikan terlihat gelisah, cenderung menggosokkan tubuhnya ke permukaan benda-benda di akuarium atau kolam.</p>
@@ -114,7 +276,12 @@
                 <li>Karantina: Jika Anda memiliki ikan yang terinfeksi white spot, sebaiknya pisahkan ikan tersebut dari yang lain untuk mencegah penyebaran penyakit. Tempatkan ikan tersebut dalam wadah karantina yang terpisah dengan kondisi lingkungan yang optimal untuk penyembuhan.</li>
             </ol>
             <p>Penting untuk dicatat bahwa pengobatan penyakit ikan white spot membutuhkan kesabaran dan konsistensi. Beberapa siklus pengobatan mungkin diperlukan untuk memastikan semua parasit mati.</p>
-        </div>
-    {% endif %}
+            
+            {% endif %}
+    </div><br /><br /><br /><br />
+    
+    
+    <a href="./uploadprediksi.html" class='btn'>go back</a>
+    <br /><br /><br /><br /></center>
 </body>
 </html>
