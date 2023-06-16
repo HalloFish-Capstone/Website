@@ -196,14 +196,14 @@
         <button id="scroll-top">
         <i class="fas fa-arrow-up"></i>
         </button>
-        <div class="prediction-info">
-            
+
+        {% if predicted_class == 'BACTERIALFIN' %}
+        <div class="prediction-info">            
             <h2>BACTERIAL</h2>
-            {% if prediction == 'REDSPOT' %}
             <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait REDSPOT -->
-            <img src="path/to/redspot-image.jpg" alt="GambarBacterial" /><br />
-            <p style="color: green; font-size: 20px;">Bacterial </p>
+            <img src="../static/Img/bacterialfin.JPG" alt="GambarBacterial" /><br />
+            <p style="color: green; font-size: 20px;">Bacterial</p>
             <p>Ciri utama: Perubahan fisik, Infeksi bakteri pada ikan dapat menyebabkan perubahan fisik yang terlihat, seperti lesi atau luka pada kulit atau sirip. Lesi ini dapat berupa bintik-bintik putih, benang-benang putih, atau warna kulit yang berubah menjadi abu-abu atau keabu-abuan. Jaringan yang terinfeksi juga dapat mengalami pembusukan atau pembengkakan.</p>
             <p>Perilaku: Ikan yang terinfeksi bakteri dapat menunjukkan perubahan perilaku seperti kehilangan nafsu makan, kelemahan, atau kurang aktif. Mereka mungkin terlihat malas atau mengambang di permukaan air.</p>
             <p>Deskripsi: Penyakit ikan bakterial (bacterial disease) adalah kondisi penyakit yang disebabkan oleh infeksi bakteri pada ikan. Bakteri dapat masuk ke dalam tubuh ikan melalui berbagai cara, seperti luka, stres, atau kondisi lingkungan yang tidak optimal. Infeksi bakteri pada ikan dapat menyebabkan berbagai gejala dan masalah kesehatan yang serius.</p>
@@ -218,34 +218,22 @@
             </ol>
         </div><br /><br /><br /><br />
     
+        {% elif predicted_class == 'HEALTHY' %}
         <div class="prediction-info">
             <h2>HEALTHY</h2>
-            {% elif prediction == 'WHITESPOT' %}
             <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT --><br />
-            <img src="path/to/whitespot-image.jpg" alt="GambarHealthy" /><br />
-            <p style="color: blue; font-size: 20px;">Bacterial (bold biru dan besar)</p>
-            <p>Ciri utama: Perubahan fisik, Infeksi bakteri pada ikan dapat menyebabkan perubahan fisik yang terlihat, seperti lesi atau luka pada kulit atau sirip. Lesi ini dapat berupa bintik-bintik putih, benang-benang putih, atau warna kulit yang berubah menjadi abu-abu atau keabu-abuan. Jaringan yang terinfeksi juga dapat mengalami pembusukan atau pembengkakan.</p>
-            <p>Perilaku: Ikan yang terinfeksi bakteri dapat menunjukkan perubahan perilaku seperti kehilangan nafsu makan, kelemahan, atau kurang aktif. Mereka mungkin terlihat malas atau mengambang di permukaan air.</p>
-            <p>Deskripsi: Penyakit ikan bakterial (bacterial disease) adalah kondisi penyakit yang disebabkan oleh infeksi bakteri pada ikan. Bakteri dapat masuk ke dalam tubuh ikan melalui berbagai cara, seperti luka, stres, atau kondisi lingkungan yang tidak optimal. Infeksi bakteri pada ikan dapat menyebabkan berbagai gejala dan masalah kesehatan yang serius.</p>
-            <p>Pengobatan: Pengobatan penyakit ikan bacterial melibatkan beberapa langkah yang dapat dilakukan:</p>
-            <ol>
-                <li>Identifikasi dan diagnosis: Penting untuk mengidentifikasi jenis bakteri penyebab infeksi agar pengobatan yang tepat dapat diberikan. Dalam beberapa kasus, pemeriksaan laboratorium atau konsultasi dengan ahli akuakultur atau dokter hewan mungkin diperlukan.</li>
-                <li>Isolasi ikan yang terinfeksi: Jika ikan terinfeksi, segera pisahkan dari ikan lainnya untuk mencegah penyebaran penyakit ke ikan lain di dalam akuarium atau kolam. Ikan yang terinfeksi harus dipindahkan ke wadah yang bersih dan terpisah.</li>
-                <li>Perawatan air dan lingkungan: Pastikan kualitas air dan lingkungan yang optimal bagi ikan. Monitor dan sesuaikan parameter seperti suhu, pH, kadar amonia, dan oksigen terlarut agar kondisi lingkungan mendukung pemulihan ikan yang terinfeksi.</li>
-                <li>Penggunaan antibiotik: Dalam beberapa kasus, pengobatan dengan antibiotik dapat diperlukan untuk mengatasi infeksi bakterial. Penggunaan antibiotik harus dilakukan dengan hati-hati dan sesuai petunjuk dokter hewan atau ahli akuakultur yang berpengalaman. Penting untuk memperhatikan dosis yang benar dan jangka waktu pengobatan yang tepat agar infeksi dapat diatasi dengan efektif.</li>
-                <li>Pemberian obat-obatan tambahan: Selain antibiotik, ada beberapa obat tambahan yang dapat digunakan untuk meningkatkan kekebalan ikan dan membantu dalam pemulihan mereka. Ini dapat termasuk probiotik, vitamin, atau suplemen lain yang direkomendasikan oleh ahli akuakultur.</li>
-                <li>Perbaikan manajemen akuarium atau kolam: Evaluasi kondisi keseluruhan akuarium atau kolam dan pastikan bahwa praktik manajemen yang baik diterapkan. Ini termasuk menjaga kebersihan, melakukan penggantian air rutin, dan memberikan pakan yang seimbang dan berkualitas tinggi.</li>
-            </ol>
+            <img src="../static/Img/healthy.jpg" alt="GambarHealthy" /><br />
+            <p style="color: blue; font-size: 20px;">HEALTHY</p>
             <p>Ikan Anda sehat dan terus pertahankan semua aspeknya. Jaga kebersihan air, pemberian makanan yang seimbang, serta lingkungan hidup yang optimal untuk memastikan kesehatan dan kesejahteraan ikan Anda. Perhatikan juga tanda-tanda kesehatan ikan, seperti aktivitas normal, nafsu makan yang baik, dan penampilan yang cerah. Dengan perhatian dan perawatan yang tepat, Anda dapat memastikan ikan Anda tetap sehat dan bahagia.</p>
         </div><br /><br /><br /><br />
     
+        {% elif predicted_class == 'REDSPOT' %}
         <div class="prediction-info">
             <h2>REDSPOT</h2>
-            {% elif prediction == 'HEALTHY' %}
             <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait HEALTHY -->
-            <img src="path/to/healthy-image.jpg" alt="GambarRedspot" /><br />
+            <img src="../static/Img/redspot.JPG" alt="GambarRedspot" /><br />
             <p style="color: red; font-size: 20px;">Red Spot </p>
             <p>Ciri utama penyakit ikan red spot adalah munculnya bintik-bintik merah pada tubuh ikan. Bintik merah tersebut dapat terlihat seperti titik-titik kecil atau membesar dan menyebar ke area yang lebih luas.</p>
             <p>Perilaku : ikan yang terinfeksi juga dapat mengalami gejala lain seperti gatal, menggosokkan tubuhnya ke substrat atau permukaan objek lain, dan kehilangan nafsu makan.</p>
@@ -258,12 +246,12 @@
             </ol>
         </div><br /><br /><br /><br />
     
+        {% elif predicted_class == 'WHITESPOT' %}
         <div class="prediction-info">
             <h2>WHITESPOT</h2>
-            {% elif prediction == 'BACTERIAL' %}
             <br />
             <!-- Tampilkan informasi tambahan atau gambar terkait BACTERIAL -->
-            <img src="path/to/bacterial-image.jpg" alt="GambarWhitespot" /><br />
+            <img src="../static/Img/whitespot.jpg" alt="GambarWhitespot" /><br />
             <p style="color: blue; font-size: 20px;">White Spot </p>
             <p>Ciri utama: Munculnya bintik-bintik putih yang menyerupai butiran garam pada tubuh, sirip, dan insang ikan.</p>
             <p>Perilaku: Perilaku ikan menjadi lebih lesu dan tidak aktif, pernapasan ikan menjadi lebih cepat dan terengah-engah, ikan mengalami kehilangan nafsu makan, ikan terlihat gelisah, cenderung menggosokkan tubuhnya ke permukaan benda-benda di akuarium atau kolam.</p>
@@ -281,7 +269,7 @@
     </div><br /><br /><br /><br />
     
     
-    <a href="./uploadprediksi.html" class='btn'>go back</a>
+    <a href="/predict" class='btn'>go back</a>
     <br /><br /><br /><br /></center>
 </body>
 </html>
