@@ -197,7 +197,7 @@
         <i class="fas fa-arrow-up"></i>
         </button>
 
-        {% if predicted_class == 'BACTERIALFIN' %}
+        {% if predicted_class == 'WHITESPOT' %}
         <div class="prediction-info">            
             <h2>BACTERIAL</h2>
             <br />
@@ -218,17 +218,6 @@
             </ol>
         </div><br /><br /><br /><br />
     
-        {% elif predicted_class == 'HEALTHY' %}
-        <div class="prediction-info">
-            <h2>HEALTHY</h2>
-            <br />
-            <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT --><br />
-            <img src="../static/Img/healthy.jpg" alt="GambarHealthy" /><br />
-            <p style="color: blue; font-size: 20px;">HEALTHY</p>
-            <p>Ikan Anda sehat dan terus pertahankan semua aspeknya. Jaga kebersihan air, pemberian makanan yang seimbang, serta lingkungan hidup yang optimal untuk memastikan kesehatan dan kesejahteraan ikan Anda. Perhatikan juga tanda-tanda kesehatan ikan, seperti aktivitas normal, nafsu makan yang baik, dan penampilan yang cerah. Dengan perhatian dan perawatan yang tepat, Anda dapat memastikan ikan Anda tetap sehat dan bahagia.</p>
-
-        </div><br /><br /><br /><br />
-    
         {% elif predicted_class == 'REDSPOT' %}
         <div class="prediction-info">
             <h2>REDSPOT</h2>
@@ -247,7 +236,7 @@
             </ol>
         </div><br /><br /><br /><br />
     
-        {% elif predicted_class == 'WHITESPOT' %}
+        {% elif predicted_class == 'HEALTHY' %}
         <div class="prediction-info">
             <h2>WHITESPOT</h2>
             <br />
@@ -266,8 +255,18 @@
             </ol>
             <p>Penting untuk dicatat bahwa pengobatan penyakit ikan white spot membutuhkan kesabaran dan konsistensi. Beberapa siklus pengobatan mungkin diperlukan untuk memastikan semua parasit mati.</p>
             
-            {% endif %}
     </div><br /><br /><br /><br />
+    {% else %}
+    <div class="prediction-info">
+        <h2>HEALTHY</h2>
+        <br />
+        <!-- Tampilkan informasi tambahan atau gambar terkait WHITESPOT --><br />
+        <img src="../static/Img/healthy.jpg" alt="GambarHealthy" /><br />
+        <p style="color: blue; font-size: 20px;">HEALTHY</p>
+        <p>Ikan Anda sehat dan terus pertahankan semua aspeknya. Jaga kebersihan air, pemberian makanan yang seimbang, serta lingkungan hidup yang optimal untuk memastikan kesehatan dan kesejahteraan ikan Anda. Perhatikan juga tanda-tanda kesehatan ikan, seperti aktivitas normal, nafsu makan yang baik, dan penampilan yang cerah. Dengan perhatian dan perawatan yang tepat, Anda dapat memastikan ikan Anda tetap sehat dan bahagia.</p>
+
+    </div><br /><br /><br /><br />
+    {% endif %}
     
     
     <a href="/predict" class='btn'>go back</a>

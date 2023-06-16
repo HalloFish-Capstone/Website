@@ -467,7 +467,7 @@ section.hero {
 
 /*---<<< Testimonials >>>---*/
 .testimonial {
-  background-image: linear-gradient(45deg, rgba(var(--grad-color-1), 0.8), rgba(var(--grad-color-2), 0.8)), url(Img/fishcover.jpg);
+  background-image: linear-gradient(45deg, rgba(var(--grad-color-1), 0.8), rgba(var(--grad-color-2), 0.8)), url(../Img/fishcover.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
