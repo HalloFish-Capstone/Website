@@ -197,7 +197,7 @@
         <i class="fas fa-arrow-up"></i>
         </button>
 
-        {% if predicted_class == 'HEALTHY' %}
+        {% if predicted_class == 'WHITESPOT' %}
         <div class="prediction-info">            
             <h2>BACTERIAL</h2>
             <br />
@@ -218,7 +218,7 @@
             </ol>
         </div><br /><br /><br /><br />
     
-        {% elif predicted_class == 'WHITESPOT' %}
+        {% elif predicted_class == 'BACTERIALFIN' %}
         <div class="prediction-info">
             <h2>HEALTHY</h2>
             <br />
@@ -247,7 +247,7 @@
             </ol>
         </div><br /><br /><br /><br />
     
-        {% elif predicted_class == 'BACTERIALFIN' %}
+        {% elif predicted_class == 'HEALTHY' %}
         <div class="prediction-info">
             <h2>WHITESPOT</h2>
             <br />
